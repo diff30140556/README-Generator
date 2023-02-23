@@ -4,7 +4,8 @@
 
 README.md generator is a quick tool for you to generate a simple and comprehensive README document for your project. Run the tool in terminal to create the file without writing Markdown language!
 
-##DEMO
+## DEMO
+
 [DEMO Video Link](https://drive.google.com/file/d/1Q4TO-41fJERGpmJvlhxro2JX-ttfo7Aj/view)
 
 ## Installation
