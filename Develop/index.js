@@ -55,7 +55,7 @@ const questions = [
     },
 ];
 
-// TODO: Create a function to write README file
+// create a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(`./new_README/${fileName}`, data, err => {
         if (err) throw new Error(`Oops! Looks like there's something wrong with writing file.`)
@@ -63,6 +63,7 @@ function writeToFile(fileName, data) {
     })
 }
 
+// ask questions function
 function askQuestions() {
     inquirer
         .prompt(questions)

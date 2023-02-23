@@ -25,13 +25,8 @@ function renderLicenseBadge(license) {
   return licenseBadge;
 }
 
-// TODO: Create a function that returns the license link
+// Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-
 function renderLicenseSection(license) {
   let licenseDescription = '';
 
@@ -97,12 +92,12 @@ function renderLicenseSection(license) {
       licenseDescription = `N/A`
       break;
     default:
-      licenseDescription = `Haven't choose`;
+      licenseDescription = ``;
   }
   return licenseDescription;
 }
 
-// TODO: Create a function to generate markdown for README
+// Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.project}
   
@@ -116,6 +111,7 @@ function generateMarkdown(data) {
   
   - [Installation](#installation)
   - [Usage](#usage)
+  - [License](#license)
   - [Contributing](#contributing)
   - [Tests](#tests)
   - [Questions](#questions)
@@ -137,6 +133,8 @@ function generateMarkdown(data) {
   ${renderLicenseSection(data.license)}
   
   ## Contributing
+
+  ${data.contribution}
   
   ## Tests
   
@@ -150,15 +148,5 @@ function generateMarkdown(data) {
   Hello, if you're interested or have any questions about my works. Here's my [GitHub repo](https://github.com/${data.userName}), and you can reach out to me at ${data.email} .Thank you!
 `
 }
-
-// function init(ans){
-//   const license = ans.license;
-//   renderLicenseBadge(license);
-//   // renderLicenseLink(license);
-//   renderLicenseSection(license);
-//   generateMarkdown(ans);
-// }
-
-// init();
 
 module.exports = generateMarkdown;
